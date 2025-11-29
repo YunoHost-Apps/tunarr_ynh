@@ -1,0 +1,78 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/main/schemas/manifest.v2.schema.json
+
+packaging_format = 2
+
+id = "tunarr"
+name = "Tunarr"
+description.en = "Create live TV channels from media"
+description.fr = "Créer des chaînes de télévision en direct à partir de médias"
+
+version = "0.22.17~ynh1"
+
+maintainers = ["eric_G"]
+
+[upstream]
+license = "free"
+website = "https://tunarr.com/"
+demo = "https://demo.example.com"
+admindoc = "https://tunarr.com/"
+code = "https://github.com/chrisbenincasa/tunarr"
+
+[integration]
+yunohost = ">= 12.1.17"
+helpers_version = "2.1"
+architectures = "all"
+multi_instance = true
+
+ldap = false
+sso = false
+
+disk = "50M"
+ram.build = "50M"
+ram.runtime = "50M"
+
+[install]
+    [install.domain]
+    type = "domain"
+
+    [install.init_main_permission]
+    type = "group"
+    default = "visitors"
+
+[resources]
+
+    [resources.sources]
+
+    [resources.sources.main]
+    in_subdir = false
+    rename = "tunarr"
+    extract = false
+    amd64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v0.22.17/tunarr-0.22.17-linux-x64"
+    amd64.sha256 = "9fdc3246d32cdd226aa3729e7e1dc58b9a9fe5f1a0514356c19d14b042beab76"
+    arm64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v0.22.17/tunarr-0.22.17-linux-arm64"
+    arm64.sha256 = "001fde08d9e3e2b6b5f6b6ead4f626a0199d18c2b3fbbcbbbc3280d34c7ce7f6"
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset.amd64 = ".*\\-linux-x64"
+    autoupdate.asset.arm64 = ".*\\-linux-arm64"
+
+    [resources.sources.ffmpeg]
+    amd64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/7.1.1/ffmpeg-n7.1.1-56-gc2184b65d2-linux64-gpl-7.1.tar.xz"
+    amd64.sha256 = "ffe261a2099629964231038dd4280ecc640b9cecc236253ee462d5a5232c3cac"
+    arm64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/7.1.1/ffmpeg-n7.1.1-56-gc2184b65d2-linuxarm64-gpl-7.1.tar.xz"
+    arm64.sha256 = "3c9858be9f06becc7f9c6088b19b8d6348c74dc23fe0df9113a54570d49de817"
+
+    [resources.system_user]
+
+    [resources.install_dir]
+
+    #[resources.data_dir]
+
+    [resources.permissions]
+    main.url = "/"
+
+    [resources.ports]
+
+    [resources.apt]
+    packages = "ffmpeg"
+    
