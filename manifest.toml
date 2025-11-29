@@ -14,7 +14,6 @@ maintainers = ["eric_G"]
 [upstream]
 license = "Zlib"
 website = "https://tunarr.com/"
-demo = "https://demo.example.com"
 admindoc = "https://tunarr.com/"
 code = "https://github.com/chrisbenincasa/tunarr"
 
