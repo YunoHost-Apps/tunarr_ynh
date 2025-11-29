@@ -23,13 +23,6 @@ ynh_setup_source --dest_dir="$install_dir" --full_replace
 mv $install_dir/tunarr-* "$install_dir/tunarr"
 
 #=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-#ynh_script_progression "Updating $app's configuration files..."
-
-#ynh_config_add --template="some_config_file" --destination="$install_dir/some_config_file"
-
-#=================================================
 # REAPPLY SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."
