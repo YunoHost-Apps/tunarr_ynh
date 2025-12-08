@@ -7,7 +7,7 @@ name = "Tunarr"
 description.en = "Create live TV channels from media"
 description.fr = "Créer des chaînes de télévision en direct à partir de médias"
 
-version = "0.22.17~ynh1"
+version = "0.22.18~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -46,10 +46,10 @@ ram.runtime = "50M"
     in_subdir = false
     rename = "tunarr"
     extract = false
-    amd64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v0.22.17/tunarr-0.22.17-linux-x64"
-    amd64.sha256 = "9fdc3246d32cdd226aa3729e7e1dc58b9a9fe5f1a0514356c19d14b042beab76"
-    arm64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v0.22.17/tunarr-0.22.17-linux-arm64"
-    arm64.sha256 = "001fde08d9e3e2b6b5f6b6ead4f626a0199d18c2b3fbbcbbbc3280d34c7ce7f6"
+    amd64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v0.22.18/tunarr-0.22.18-linux-x64"
+    amd64.sha256 = "709e08657fc5de14b5c6327ad7418b66cc3d9b561ddf04bffc29018b575eceb1"
+    arm64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v0.22.18/tunarr-0.22.18-linux-arm64"
+    arm64.sha256 = "d3451f59e46cb3fb8277bff06001f256f2f4e06f7d697fc564c1690460715839"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = ".*\\-linux-x64"
