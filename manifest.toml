@@ -20,7 +20,7 @@ code = "https://github.com/chrisbenincasa/tunarr"
 [integration]
 yunohost = ">= 12.1.17"
 helpers_version = "2.1"
-architectures = "all"
+architectures = ["amd64", "arm64"]
 multi_instance = true
 
 ldap = false
