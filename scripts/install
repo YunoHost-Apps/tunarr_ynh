@@ -14,7 +14,9 @@ ynh_script_progression "Setting up source files..."
 # Download, check integrity, uncompress and patch the source from manifest.toml
 ynh_setup_source --dest_dir="$install_dir"
 
-chmod +x "$install_dir/tunarr"
+mv "$install_dir/tunarr-*" "$install_dir/tunarr"
+
+#chmod +x "$install_dir/tunarr"
 
 #=================================================
 # APP INITIAL CONFIGURATION
