@@ -34,6 +34,8 @@ ynh_config_add_nginx
 # Create a dedicated systemd config
 ynh_config_add_systemd
 
+ynh_config_add_logrotate
+
 yunohost service add "$app" --description="Create live TV channels from media" --log="/var/log/$app/$app.log"
 
 #=================================================
