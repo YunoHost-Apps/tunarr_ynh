@@ -9,11 +9,15 @@ User=__APP__
 Group=__APP__
 WorkingDirectory=__INSTALL_DIR__/
 ExecStart=__INSTALL_DIR__/tunarr --port __PORT__
-ExecReload=pkill tunarr
-ExecStop=pkill tunarr
+ExecReload=pkill -INT tunarr
+ExecStop=pkill -INT tunarr
 KillMode=process
 Restart=always
 RestartSec=15
+StandardOutput=append:/var/log/__APP__/__APP__.log 
+StandardError=inherit
+Environment=TUNARR_BIND_ADDR=127.0.0.1
+Environment=TUNARR_SERVER_TRUST_PROXY=true
 
 # Sandboxing options to harden security
 # Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
