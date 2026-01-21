@@ -16,8 +16,6 @@ ynh_setup_source --dest_dir="$install_dir"
 
 mv $install_dir/tunarr-* "$install_dir/tunarr"
 
-#chmod +x "$install_dir/tunarr"
-
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
