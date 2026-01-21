@@ -16,6 +16,8 @@ Restart=always
 RestartSec=15
 StandardOutput=append:/var/log/__APP__/__APP__.log 
 StandardError=inherit
+Environment=TUNARR_BIND_ADDR=127.0.0.1
+Environment=TUNARR_SERVER_TRUST_PROXY=true
 
 # Sandboxing options to harden security
 # Details for these options: https://www.freedesktop.org/software/systemd/man/systemd.exec.html
