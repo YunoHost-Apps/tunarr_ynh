@@ -22,7 +22,7 @@ ynh_setup_source --dest_dir="$install_dir"
 
 mv $install_dir/tunarr-* "$install_dir/tunarr"
 
-ynh_setup_source --dest_dir="$install_dir/ffmpeg" --source_id="ffmepg"
+ynh_setup_source --dest_dir="$install_dir/ffmpeg" --source_id="ffmpeg"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATION
