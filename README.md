@@ -11,7 +11,7 @@ It shall NOT be edited by hand.
 Create live TV channels from media
 
 [![🌐 Official app website](https://img.shields.io/badge/Official_app_website-darkgreen?style=for-the-badge)](https://tunarr.com/)
-[![Version: 1.1.3~ynh1](https://img.shields.io/badge/Version-1.1.3~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/tunarr/)
+[![Version: 1.1.6~ynh1](https://img.shields.io/badge/Version-1.1.6~ynh1-rgb(18,138,11)?style=for-the-badge)](https://ci-apps.yunohost.org/ci/apps/tunarr/)
 
 <div align="center">
 <a href="https://apps.yunohost.org/app/tunarr"><img height="100px" src="https://github.com/YunoHost/yunohost-artwork/raw/refs/heads/main/badges/neopossum-badges/badge_more_info_on_the_appstore.svg"/></a>
@@ -37,6 +37,11 @@ sudo yunohost app install https://github.com/YunoHost-Apps/tunarr_ynh/tree/testi
 
 # upgrade an existing install:
 sudo yunohost app upgrade tunarr -u https://github.com/YunoHost-Apps/tunarr_ynh/tree/testing
+```
+
+You can also switch to the testing branch to update from testing by default (as same as for APT when you chose to use a testing repos) with this command:
+```bash
+sudo yunohost app setting tunarr upgrade_channel -v testing
 ```
 
 ### 📚 App packaging documentation
