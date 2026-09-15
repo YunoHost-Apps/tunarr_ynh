@@ -7,7 +7,7 @@ name = "Tunarr"
 description.en = "Create live TV channels from media"
 description.fr = "Créer des chaînes de télévision en direct à partir de médias"
 
-version = "1.3.13~ynh2"
+version = "1.3.15~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -45,20 +45,20 @@ ram.runtime = "50M"
     [resources.sources.main]
     in_subdir = false
     rename = "tunarr"
-    amd64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v1.3.13/tunarr-v1.3.13-linux-x64.tar.gz"
-    amd64.sha256 = "177887b75d6837e2313e8f34b3fb0cceec42cfef26b856d23d42e73295e60e46"
-    arm64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v1.3.13/tunarr-v1.3.13-linux-arm64.tar.gz"
-    arm64.sha256 = "a45e9f3877536d0ba89da9d9cff5714e4f5bcf403ede18cdba0699a207b4923b"
+    amd64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v1.3.15/tunarr-v1.3.15-linux-x64.tar.gz"
+    amd64.sha256 = "6297e4b4cfe57f222dfb91c1b9a17cc5ceb18a00b5ab1a239e3856f92b3f33eb"
+    arm64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v1.3.15/tunarr-v1.3.15-linux-arm64.tar.gz"
+    arm64.sha256 = "7acd33fa85970c14d69b693b103e01eab013927a87922d187740f8ea58a48299"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = ".*\\-linux-x64"
     autoupdate.asset.arm64 = ".*\\-linux-arm64"
 
     [resources.sources.ffmpeg]
-    amd64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/8.1.2/ffmpeg-n8.1.2-etv-g3c0520f9-linux64-gpl-8.1.tar.xz"
-    amd64.sha256 = "af335f348a8cce5a92aaf69ce697c76c9ab6336cc1c0ce24c2f6a3557a69f9bc"
-    arm64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/8.1.2/ffmpeg-n8.1.2-etv-g3c0520f9-linuxarm64-gpl-8.1.tar.xz"
-    arm64.sha256 = "e2694beb8a959f59756bfba8831bd0064e05f8b291a364b7f203ac32d5930526"
+    amd64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/8.1.2/ffmpeg-n8.1.2-etv-g14f231eb-linux64-gpl-8.1.tar.xz"
+    amd64.sha256 = "3b764d897198599e736caa9a1c4c50c211f7ee2bcf0244aecad329ff0cf6f37e"
+    arm64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/8.1.2/ffmpeg-n8.1.2-etv-g14f231eb-linuxarm64-gpl-8.1.tar.xz"
+    arm64.sha256 = "1a5691b1791877a3fccaa7653943d92ca8300db32b9bc69079c7a08052607d1a"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.upstream = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg"
