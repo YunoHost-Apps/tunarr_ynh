@@ -7,7 +7,7 @@ name = "Tunarr"
 description.en = "Create live TV channels from media"
 description.fr = "Créer des chaînes de télévision en direct à partir de médias"
 
-version = "1.3.15~ynh1"
+version = "1.3.15~ynh2"
 
 maintainers = ["eric_G"]
 
@@ -55,10 +55,10 @@ ram.runtime = "50M"
     autoupdate.asset.arm64 = ".*\\-linux-arm64"
 
     [resources.sources.ffmpeg]
-    amd64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/8.1.2/ffmpeg-n8.1.2-etv-g14f231eb-linux64-gpl-8.1.tar.xz"
-    amd64.sha256 = "3b764d897198599e736caa9a1c4c50c211f7ee2bcf0244aecad329ff0cf6f37e"
-    arm64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/8.1.2/ffmpeg-n8.1.2-etv-g14f231eb-linuxarm64-gpl-8.1.tar.xz"
-    arm64.sha256 = "1a5691b1791877a3fccaa7653943d92ca8300db32b9bc69079c7a08052607d1a"
+    amd64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/8.1.2/ffmpeg-n8.1.2-etv-gb138f203-linux64-gpl-8.1.tar.xz"
+    amd64.sha256 = "20e0145e051f93517aaa3607fc482383968182f198e35d1520f29347db23c9d3"
+    arm64.url = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg/releases/download/8.1.2/ffmpeg-n8.1.2-etv-gb138f203-linuxarm64-gpl-8.1.tar.xz"
+    arm64.sha256 = "a9b1f8d98f1686f1d845392306285d4098ebd36579a0b614eb637324172e53c4"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.upstream = "https://github.com/ErsatzTV/ErsatzTV-ffmpeg"
