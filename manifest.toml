@@ -43,8 +43,6 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    in_subdir = false
-    rename = "tunarr"
     amd64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v2026.11.2/tunarr-v2026.11.2-linux-x64.tar.gz"
     amd64.sha256 = "0a6f81c7f1c289ab5bc05a54913223cc63ba3fb102fa10e73e536fd38fcb7500"
     arm64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v2026.11.2/tunarr-v2026.11.2-linux-arm64.tar.gz"
