@@ -20,12 +20,12 @@ ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-mv $install_dir/tunarr-* "$install_dir/tunarr"
-
 ynh_setup_source --dest_dir="$install_dir/ffmpeg" --source_id="ffmpeg"
 
-ynh_exec_as_app $install_dir/tunarr settings update --hide_banner --settings.ffmpeg.ffmpegExecutablePath="$install_dir/ffmpeg/bin/ffmpeg"
-ynh_exec_as_app $install_dir/tunarr settings update --hide_banner --settings.ffmpeg.ffprobeExecutablePath="$install_dir/ffmpeg/bin/ffprobe"
+pushd $install_dir
+    ynh_exec_as_app $install_dir/tunarr settings update --hide_banner --settings.ffmpeg.ffmpegExecutablePath="$install_dir/ffmpeg/bin/ffmpeg"
+    ynh_exec_as_app $install_dir/tunarr settings update --hide_banner --settings.ffmpeg.ffprobeExecutablePath="$install_dir/ffmpeg/bin/ffprobe"
+popd
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATION

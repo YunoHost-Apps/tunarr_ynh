@@ -7,7 +7,7 @@ name = "Tunarr"
 description.en = "Create live TV channels from media"
 description.fr = "Créer des chaînes de télévision en direct à partir de médias"
 
-version = "2026.10.2~ynh1"
+version = "2026.11.3~ynh2"
 
 maintainers = ["eric_G"]
 
@@ -43,26 +43,24 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
-    in_subdir = false
-    rename = "tunarr"
-    amd64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v2026.10.2/tunarr-v2026.10.2-linux-x64.tar.gz"
-    amd64.sha256 = "8176b343b6ce632d974ee6a538c77760b35634a791b3389c8cb3b98c0a78c3dc"
-    arm64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v2026.10.2/tunarr-v2026.10.2-linux-arm64.tar.gz"
-    arm64.sha256 = "63ab4163cb4bbcf617389679d566df7d9bae1bf7ed2e4cc979c8d04f4b64f5d3"
+    amd64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v2026.11.3/tunarr-v2026.11.3-linux-x64.tar.gz"
+    amd64.sha256 = "aade2181c6bc72af4758ef4849a02a76be0ac4262f7ecc69e339bd0b8ac757c7"
+    arm64.url = "https://github.com/chrisbenincasa/tunarr/releases/download/v2026.11.3/tunarr-v2026.11.3-linux-arm64.tar.gz"
+    arm64.sha256 = "374a5dd83cab13e54de2c6a59361bee29fd2662f213579c97c72fd57c6dca8c0"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = ".*\\-linux-x64"
     autoupdate.asset.arm64 = ".*\\-linux-arm64"
 
     [resources.sources.ffmpeg]
-    amd64.url = "https://github.com/orhtej2/ffmpeg-binary/releases/download/n9.0.2/ffmpeg-n9.0.2-linux-amd64.tar.gz"
-    amd64.sha256 = "a0a37ce455dd9ace513d45e1237d8cb27309ac0df5cd5e9e5e8a2e55558159ce"
-    arm64.url = "https://github.com/orhtej2/ffmpeg-binary/releases/download/n9.0.2/ffmpeg-n9.0.2-linux-arm64.tar.gz"
-    arm64.sha256 = "f9d1cb32cb61ba262e94602ce941b1de3b459c056e12de5eef85780b8c67387a"
+    amd64.url = "https://github.com/orhtej2/ffmpeg-binary/releases/download/n9.1/ffmpeg-n9.1-linux-amd64.tar.gz"
+    amd64.sha256 = "ba61ceecf9db4843825aada15f8818d7846343fbb3ac9d00a0b351f36e797d7d"
+    arm64.url = "https://github.com/orhtej2/ffmpeg-binary/releases/download/n9.1/ffmpeg-n9.1-linux-arm64.tar.gz"
+    arm64.sha256 = "8551d58595276f18b06eed634c91a167c31677bb643e1c306a8355de7bcde309"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.upstream = "https://github.com/orhtej2/ffmpeg-binary"
-    autoupdate.version_regex = "n(\\d+\\.\\d+\\.\\d+)"
+    autoupdate.version_regex = "n(?P<version>\\d+(\\.\\d+)+)"
     autoupdate.asset.amd64 = ".*linux-amd64\\.tar\\.gz"
     autoupdate.asset.arm64 = ".*linux-arm64\\.tar\\.gz"
 
